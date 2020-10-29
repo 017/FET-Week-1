@@ -1,0 +1,415 @@
+* {
+  font-family: 'Metropolis', sans-serif;
+  font-weight: 500;
+  box-sizing: border-box;
+  transition: .25s;
+  -webkit-font-smoothing: antialiased;
+  backface-visibility: hidden;
+}
+
+body {
+  background-color: #272727;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 1px solid #272727;
+  background: #2a333e;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+
+::-webkit-scrollbar-track {
+  background: #101010;
+  box-shadow: inset 0 0 5px #1c1212;
+}
+
+a:webkit-any-link {
+  color: #8bfff5;
+  cursor: pointer;
+  text-decoration: solid;
+    text-decoration-line: underline;
+    text-decoration-color: initial;
+    text-decoration-style: initial;
+}
+
+a:link {
+  color: #8bfff5;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #c78bff;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8bc7ff;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #ff8bec;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+h1 {
+  font: bold;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  overflow: hidden;
+  background-color: #2a333e;
+}
+
+li {
+  text-align: -webkit-match-parent;
+  float: left;
+}
+
+li a {
+  background-color: #2a333e;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #272727;
+  box-shadow: 0 0 10px rgba(255, 215, 0, .5);
+  border-radius: 5px;
+}
+
+.logo {
+  height: 3em;
+  width: 3em;
+  overflow: hidden;
+  top: -15px;
+  position: relative;
+  margin-right: 0.5em;
+}
+
+.logo img {
+  height: 3em;
+  width: 3em;
+}
+
+.nav {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+  background: #2a333e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.main {
+  float: left;
+  position: relative;
+  width: 100%;
+  min-width: 450px;
+  height: 100%;
+  padding: 5em;
+  padding-left: 7em;
+  padding-right: 32em;
+  margin-left: 1em;
+  margin-top: 4em;
+  color: white;
+  background-color: #373737;
+  z-index: 2;
+}
+
+.sidebar {
+  padding-top: 4em;
+  float: right;
+  width: 30em;
+  height: 100%;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  background-color: #202020;
+  overflow-x: hidden;
+}
+
+.info-block {
+  list-style: none;
+  float: left;
+  width: 100%;
+  min-width: 500px;
+}
+
+.about {
+  float: left;
+  padding-bottom: 10em;
+}
+
+.info-card {
+  float: left;
+  color: white;
+}
+
+.info-card-icon {
+  float: left;
+  position: fixed;
+  width: 4em;
+  height: 4em;
+  margin: 1em;
+  margin-left: 0;
+  border-radius: 4em;
+  overflow: hidden;
+  height: auto;
+  display: block;
+  border: solid 2px gold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.info-card-icon.disco {
+    -webkit-animation-name: disco;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.info-card-details {
+  float: right;
+  list-style: none;
+  position: fixed;
+  width: 16em;
+}
+
+.info-card-details h2 {
+  padding-top: 1em;
+  padding-left: 4em;
+}
+
+.info-card-details h5 {
+  padding-top: 1em;
+}
+
+.media-links {
+  list-style: none;
+  float: right;
+}
+
+.media-links li {
+  float: left;
+  padding: 1em;
+  margin-right: 1em;
+}
+
+.fab {
+  color: white;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1em;
+}
+
+.column {
+  flex: 25%;
+  padding: 0 1em;
+}
+
+.column img {
+  margin-top: 10px;
+  vertical-align: middle;
+  width: 100%;
+  z-index: 1;
+  border-radius: 2em;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 5px solid #272727;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.column img:hover {
+  margin-top: 10px;
+  vertical-align: middle;
+  width: 100%;
+  z-index: 5;
+  border-radius: 1em;
+  border: 15px solid #435975;
+}
+
+.tut-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1em;
+  width: 300px;
+}
+
+.tut-column {
+  flex: 25%;
+  padding: 0 1em;
+}
+
+.tut-column img {
+  margin-top: 10px;
+  vertical-align: middle;
+  width: 100%;
+  z-index: 1;
+  border-radius: 2em;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 5px solid #272727;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.tut-column img:hover {
+  margin-top: 10px;
+  vertical-align: middle;
+  width: 100%;
+  z-index: 5;
+  border-radius: 1em;
+  border: 15px solid #435975;
+}
+
+input {
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #272727;
+  background: #2a333e;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  margin: 4px;
+  padding: 10px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 7;
+  background-color: #171717;
+}
+
+footer a {
+  padding: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-image {
+  margin: auto;
+  display: block;
+  max-width: 1024px;
+  max-height: -webkit-fill-available;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 1024px;
+  text-align: center;
+  color: #94f7e9;
+  padding: 10px 0;
+  height: 150px;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform:scale(0)
+  }
+  to {
+    transofrm:scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .column  {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+  .sidebar {
+    float: left;
+    position: relative;
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column  {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .sidebar {
+    float: left;
+    position: relative;
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes disco { 
+    <?
+    for($i=0;$i<=100;$i++)
+    {
+        echo create_animation_frame($i);
+        $i++; // Add another value to $i. Remove line = 100 frames.
+    }
+    ?> 
+}
