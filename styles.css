@@ -403,13 +403,55 @@ footer a {
     width: 100%;
   }
 }
+  
+@-webkit-keyframes party-time-text { 
+  0% {color:red}
+  16.66667%{color:#ff0}
+  33.33333%{color:lime}
+  50%{color:cyan}
+  66.66667%{color:blue}
+  83.33333%{color:#f0f}
+  100%{color:red}
+}
 
-@-webkit-keyframes disco { 
-    <?
-    for($i=0;$i<=100;$i++)
-    {
-        echo create_animation_frame($i);
-        $i++; // Add another value to $i. Remove line = 100 frames.
-    }
-    ?> 
+@keyframes party-time-text {
+  0%{color:red}
+  16.66667%{color:#ff0}
+  33.33333%{color:lime}
+  50%{color:cyan}
+  66.66667%{color:blue}
+  83.33333%{color:#f0f}
+  100%{color:red}
+}
+
+@keyframes party-time-border {
+  0%{border-color: red;}
+  16.66667%{border-color:#ff0}
+  33.33333%{border-color:lime}
+  50%{border-color:cyan}
+  66.66667%{border-color:blue}
+  83.33333%{border-color:#f0f}
+  100%{border-color:red}
+}
+
+.partyTimeNormal {
+  color: #171717;
+}
+
+.partyTimeNormal:hover {
+  animation-name: party-time-text;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+.partyTime:hover {
+  animation-name: party-time-text !important;
+  animation-duration: 6s !important;
+  animation-iteration-count: infinite !important;
+}
+
+.partyBorder {
+  animation-name: party-time-border !important;
+  animation-duration: 6s !important;
+  animation-iteration-count: infinite !important;
 }

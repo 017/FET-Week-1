@@ -1,19 +1,19 @@
-// // Experimenting with RNG colors and stuff for fun
+let partyTimeToggle = false;
 
-// function partyMode($num) {
-//   $hex_values = array(
-//     '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f');
-  
-//     $current_hex = "";
-
-//     for($i=0; $i<3; $i++)
-//     {
-//         $rand = rand(0,15);
-//         $current_hex = $hex_values[$rand];
-//     }
-
-//     return $num."% { border: #".$current_hex."; }";
-
-// }
-
-// This makes the document load first before we go looking for the .gallery-thumbnail class to attach event listeners to.
+function partyTime() {
+  if (partyTimeToggle == false) {
+    $("a").addClass("partyTime");
+    $("a").prevAll().addClass("partyTime");
+    $("img").addClass("partyBorder");
+    $("img").prevAll().addClass("partyBorder");
+    partyTimeToggle = true;
+    console.log(`Party Time: ENABLED`);
+  } else {
+    $("a").removeClass("partyTime");
+    $("a").prevAll().removeClass("partyTime");
+    $("img").removeClass("partyBorder");
+    $("img").prevAll().removeClass("partyBorder");
+    partyTimeToggle = false;
+    console.log(`Party Time: DIASBLED`);
+  }
+}

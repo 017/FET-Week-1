@@ -4,6 +4,7 @@
     <title>Gallery</title>
     <script src="./scripts.js"></script>
     <script src="https://kit.fontawesome.com/e122de931b.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./styles.css" />
     <link rel="icon" href="./img/Splyce_Icon.png" type="image/png">
   </head>
@@ -11,9 +12,9 @@
   <body>
     <ul class="nav" style:"height: auto">
       <li class="logo"><img src="./img/Splyce_Icon.png"></li>
-      <li class="nav-gallery"><a href="./gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
-      <li class="nav-tutorials"><a href="./tutorials.html"><i class="fas fa-info-circle"></i> Tutorials</a></li>
-      <li class="nav-about"><a href="./about.html"><i class="fas fa-question-circle"></i> About</a></li>
+      <li class="nav-gallery"><a href="./gallery.html" id="partyTime"><i class="fas fa-images"></i> Gallery</a></li>
+      <li class="nav-tutorials"><a href="./tutorials.html" id="partyTime"><i class="fas fa-info-circle"></i> Tutorials</a></li>
+      <li class="nav-about"><a href="./about.html" id="partyTime"><i class="fas fa-question-circle"></i> About</a></li>
     </ul>
     <div class="main">
       <h1>Portfolio</h1>
@@ -90,6 +91,7 @@
       <td><a href="./gallery.html"><i class="fas fa-images"></i> Gallery</a></td>
       <td><a href="./tutorials.html"><i class="fas fa-info-circle"></i> Tutorials</a></td>
       <td><a href="./about.html"><i class="fas fa-question-circle"></i> About</a></td>
+      <td><a onclick="partyTime()" class="partyTimeNormal"><i class="fas fa-bacon"></i> Party Time!</a></td>
     </tr>
   </footer>
 
